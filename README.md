@@ -1,3 +1,5 @@
+![law-checker banner](assets/banner.png)
+
 # law-checker (Legal Department)
 
 **Open-source AI workflow for source-grounded first-look legal orientation.**
