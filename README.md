@@ -159,6 +159,10 @@ Vorbereitete inaktive Einträge: StGB und MStV.
 
 ## Registry-Changelog
 
+- 2026-07-23 — config v5: Steuerberatungsgesetz (StBerG) ergänzt und aktiviert
+  — on-demand für die Rohbefunde zur geplanten Veröffentlichung des Moduls
+  `steuer-assistent` (Prüfgegenstand: Hilfeleistung in Steuersachen). UWG war
+  bereits registriert und aktiv, lokaler Normtext bereits vorhanden.
 - 2026-07-19 — config v4: SGB V und DSGVO aktiviert; Verordnung (EU) 2025/327
   über den europäischen Gesundheitsdatenraum (EHDS-VO) und Charta der
   Grundrechte der Europäischen Union (GRCh) ergänzt und aktiviert. SGB V über
