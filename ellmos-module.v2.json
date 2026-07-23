@@ -1,0 +1,39 @@
+{
+  "schema": "ellmos.module.v2",
+  "id": "rechtsabteilung",
+  "display_name": "law-checker",
+  "category": "domains",
+  "kind": "workflow",
+  "status": "development",
+  "visibility": "public-candidate",
+  "provides": [
+    "domain.legal.orientation",
+    "domain.legal.sources"
+  ],
+  "requires": [],
+  "optional": [],
+  "conflicts": [],
+  "surfaces": [
+    "workflow",
+    "skill"
+  ],
+  "state": {
+    "ownership": "external",
+    "location": "project"
+  },
+  "boundaries": {
+    "network": "listed",
+    "data": "sensitive",
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ]
+  },
+  "source_of_truth": {
+    "type": "local-directory",
+    "path": ".",
+    "repository": null
+  },
+  "adapters": []
+}

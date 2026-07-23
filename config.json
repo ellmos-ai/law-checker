@@ -1,0 +1,159 @@
+{
+  "version": 4,
+  "beschreibung": "Konfiguration des Skills rechtsabteilung. Maschinenlesbare Registry der eingesetzten Gesetzbuecher + Workflow-Einstellungen. Aenderungen nur bewusst: version hochzaehlen + Vermerk im CHANGELOG-Block der README. Neue Gesetze hinzufuegen = neuer Eintrag unter 'gesetzbuecher' + Normtext via _tools/gesetze_fetch.py beschaffen + enabled: true. KEIN neuer Agent noetig — der generische Agent 'gesetzbuch' verkoerpert jedes registrierte Gesetz.",
+  "gesetzbuecher": {
+    "gg": {
+      "enabled": true,
+      "name": "Grundgesetz fuer die Bundesrepublik Deutschland",
+      "kurz": "GG",
+      "zitierweise": "Art.",
+      "quelle": "_data/gesetze/GG.txt",
+      "index": null,
+      "xml_zip": "https://www.gesetze-im-internet.de/gg/xml.zip",
+      "zugriff": "volltext (klein genug fuer einen Agent-Kontext)"
+    },
+    "bgb": {
+      "enabled": true,
+      "name": "Buergerliches Gesetzbuch",
+      "kurz": "BGB",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/BGB.txt",
+      "index": "_data/gesetze/BGB_INDEX.txt",
+      "xml_zip": "https://www.gesetze-im-internet.de/bgb/xml.zip",
+      "zugriff": "index + gezielter Paragraphenzugriff (Volltext zu gross)"
+    },
+    "stgb": {
+      "enabled": false,
+      "name": "Strafgesetzbuch",
+      "kurz": "StGB",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/STGB.txt",
+      "index": "_data/gesetze/STGB_INDEX.txt",
+      "xml_zip": "https://www.gesetze-im-internet.de/stgb/xml.zip",
+      "zugriff": "index + gezielter Paragraphenzugriff",
+      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py stgb ausfuehren (URL-Slug wird dabei live verifiziert)."
+    },
+    "sgb_v": {
+      "enabled": true,
+      "name": "Sozialgesetzbuch Fuenftes Buch — Gesetzliche Krankenversicherung",
+      "kurz": "SGB V",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/SGB_V.txt",
+      "index": "_data/gesetze/SGB_V_INDEX.txt",
+      "xml_zip": "https://www.gesetze-im-internet.de/sgb_5/xml.zip",
+      "zugriff": "index + gezielter Paragraphenzugriff",
+      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py sgb_v ausfuehren."
+    },
+    "urhg": {
+      "enabled": true,
+      "name": "Gesetz ueber Urheberrecht und verwandte Schutzrechte",
+      "kurz": "UrhG",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/URHG.txt",
+      "index": null,
+      "xml_zip": "https://www.gesetze-im-internet.de/urhg/xml.zip",
+      "zugriff": "volltext"
+    },
+    "rdg": {
+      "enabled": true,
+      "name": "Gesetz ueber aussergerichtliche Rechtsdienstleistungen",
+      "kurz": "RDG",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/RDG.txt",
+      "index": null,
+      "xml_zip": "https://www.gesetze-im-internet.de/rdg/xml.zip",
+      "zugriff": "volltext"
+    },
+    "markeng": {
+      "enabled": true,
+      "name": "Gesetz ueber den Schutz von Marken und sonstigen Kennzeichen",
+      "kurz": "MarkenG",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/MARKENG.txt",
+      "index": "_data/gesetze/MARKENG_INDEX.txt",
+      "xml_zip": "https://www.gesetze-im-internet.de/markeng/xml.zip",
+      "zugriff": "index + gezielter Paragraphenzugriff"
+    },
+    "uwg": {
+      "enabled": true,
+      "name": "Gesetz gegen den unlauteren Wettbewerb",
+      "kurz": "UWG",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/UWG.txt",
+      "index": null,
+      "xml_zip": "https://www.gesetze-im-internet.de/uwg_2004/xml.zip",
+      "zugriff": "volltext"
+    },
+    "dsgvo": {
+      "enabled": true,
+      "name": "Datenschutz-Grundverordnung (EU) 2016/679",
+      "kurz": "DSGVO",
+      "zitierweise": "Art.",
+      "quelle": "_data/gesetze/DSGVO.txt",
+      "index": null,
+      "xml_zip": null,
+      "zugriff": "volltext",
+      "hinweis": "EU-Recht — amtliche EUR-Lex-PDF der konsolidierten Fassung, lokal als TXT mit Quellenkopf; abgerufen 2026-07-19."
+    },
+    "ehds": {
+      "enabled": true,
+      "name": "Verordnung (EU) 2025/327 über den europäischen Gesundheitsdatenraum",
+      "kurz": "EHDS-VO",
+      "zitierweise": "Art.",
+      "quelle": "_data/gesetze/EHDS.txt",
+      "index": null,
+      "xml_zip": null,
+      "zugriff": "volltext",
+      "hinweis": "EU-Recht — amtliche EUR-Lex-Amtsblattfassung, lokal als TXT mit Quellenkopf; abgerufen 2026-07-19."
+    },
+    "grch": {
+      "enabled": true,
+      "name": "Charta der Grundrechte der Europäischen Union",
+      "kurz": "GRCh",
+      "zitierweise": "Art.",
+      "quelle": "_data/gesetze/GRCH.txt",
+      "index": null,
+      "xml_zip": null,
+      "zugriff": "volltext",
+      "hinweis": "EU-Primärrecht — amtliche EUR-Lex-Amtsblattfassung 2012/C 326/02, lokal als TXT mit Quellenkopf; abgerufen 2026-07-19."
+    },
+    "mstv": {
+      "enabled": false,
+      "name": "Medienstaatsvertrag",
+      "kurz": "MStV",
+      "zitierweise": "§",
+      "quelle": "_data/gesetze/MSTV.txt",
+      "index": null,
+      "xml_zip": null,
+      "zugriff": "volltext",
+      "hinweis": "Laenderstaatsvertrag — NICHT auf gesetze-im-internet.de. Vor Aktivierung Text von der Landesmedienanstalt (die-medienanstalten.de) beschaffen; Abrufdatum + Quelle in den Dateikopf. Relevant fuer Presse-/Medienpruefungen (Um:bruch-Herkunftsdomaene)."
+    }
+  },
+  "on_demand_aktivierung": "Braucht ein Pruefauftrag ein registriertes, aber deaktiviertes Gesetz, darf der Skill es aktivieren: Normtext via _tools/gesetze_fetch.py <schluessel> beschaffen, enabled auf true setzen, version hochzaehlen, Vermerk in README-CHANGELOG. Fehlt das Gesetz ganz in der Registry: neuen Eintrag anlegen (gleiche Schritte). Nicht-Bundesrecht (EU/Laender) nur mit manuell beschaffter, im Dateikopf belegter Quelle.",
+  "rechtsprechung": {
+    "enabled": true,
+    "regel": "Getrennte Auslegungsschicht NACH der Normtext-Runde: Rechtsprechung zu den als einschlaegig gemeldeten Normen UND zum Pruefgegenstand. NUR web-verifizierte Entscheidungen (Gericht, Entscheidungsdatum, Aktenzeichen, ECLI falls ermittelbar, Fundstelle/URL) — NIE Urteile aus dem Gedaechtnis. Nichts gefunden = 'nicht ermittelt' sagen. Bevorzugte Quellen: Gerichts-Webseiten (bundesverfassungsgericht.de, bundesgerichtshof.de, bsg.bund.de ...), rechtsprechung-im-internet.de, dejure.org, openjur.de."
+  },
+  "wissensbasis": {
+    "jura_wiki": null,
+    "nutzung": "OPTIONAL: Pfad zu einer eigenen lokalen Rechtsgebiets-Wissensbasis eintragen (z. B. Ordner mit Rechtsgebiets-Uebersichten: Rechtsquellen-Hierarchie, Kerngesetze je Gebiet, Gutachtenstil, Instanzenzuege). Nur zur Orientierung, WELCHES Rechtsgebiet/Gesetz einschlaegig ist — NIE als Beleg zitieren (Belege nur aus Normtext + verifizierter Rechtsprechung). null = Schritt entfaellt. Lokale, nicht versionierte Werte gehoeren in config.local.json (gitignored, ueberschreibt gleichnamige Felder)."
+  },
+  "risiko_ampel": ["gering", "mittel", "hoch", "kritisch"],
+  "eskalation": "references/eskalation_risiko.md — Anwalts-Matrix + Fristen-Disziplin. Bei eingehender Rechtspost (Abmahnung, Unterlassungsaufforderung, Anwaltsschreiben) IMMER zuerst Fristen-Check.",
+  "ablauf": [
+    "config_laden",
+    "auftrag_klaeren",
+    "faktenlage",
+    "gesetzbuch_auswahl",
+    "verkoerperungs_runde",
+    "rechtsprechungsschicht",
+    "subsumtion_risiko",
+    "empfehlung_eskalation",
+    "gutachten",
+    "review_optional"
+  ],
+  "review_modell": "auto",
+  "review_optionen": ["auto (codex, dann agy, sonst offen ausweisen)", "codex", "agy", "none"],
+  "ablage": "_gutachten/",
+  "sprache": "de"
+}

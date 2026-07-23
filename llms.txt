@@ -1,0 +1,54 @@
+## Last-checked: 2026-07-13
+
+# ellmos-ai/law-checker
+
+Source-grounded legal first-look skill for German law. The repository contains
+Markdown prompts, a configurable statute registry and a small fetch tool for
+official German law texts. It is designed for local self-use in an LLM
+environment such as Claude Code.
+
+## Audience
+
+- LLM users who want a structured first legal orientation workflow for their own questions
+- Developers evaluating source-grounded legal AI prompt and agent patterns
+- Compliance reviewers checking purpose limits, data flow and disclaimer language
+- Researchers comparing statute-grounded legal assessment workflows
+
+## Important Boundaries
+
+- Not legal advice and not a law firm.
+- Not intended for hosted legal services or third-party case handling.
+- No deadline monitoring, no completeness guarantee and no actuality guarantee.
+- Legal correspondence and running deadlines require professional legal advice.
+- The repository contains no AI model and no hosted AI service.
+
+## Key Files
+
+- `README.md` - public overview, purpose limits, privacy notes and installation
+- `SKILL.md` - orchestration workflow for the legal first-look skill
+- `config.json` - statute registry and workflow configuration
+- `agents/gesetzbuch.md` - generic statute embodiment agent
+- `references/berichtsformat.md` - report format and citation discipline
+- `references/eskalation_risiko.md` - risk escalation and lawyer referral matrix
+- `_tools/gesetze_fetch.py` - fetches official statute texts into local ignored data files
+- `docs/ai-act-note.md` - EU AI Act self-classification note
+
+## Search Phrases
+
+```text
+German law checker AI first look
+source grounded legal AI German law
+Claude Code legal skill German statutes
+RDG self-use legal assessment tool
+statute registry legal first look
+law-checker Rechtsabteilung Claude Code
+German statute grounded LLM workflow
+legal AI first orientation no legal advice
+```
+
+## Disambiguation
+
+This repository is unrelated to legal SaaS products, AI lawyer chatbots,
+court-filing tools, deadline trackers, bar-admission tools and general AI law
+regulation trackers. It is a local prompt and registry bundle for cautious,
+source-grounded first orientation on German law.

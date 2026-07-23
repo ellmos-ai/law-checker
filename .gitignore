@@ -1,0 +1,30 @@
+# Interne Prüfvorgänge und Arbeitsdokumente (nicht Teil des Release)
+_gutachten/
+_intern/
+LOCK*.txt
+
+# Generierte Normtexte — werden beim Nutzer via _tools/gesetze_fetch.py geladen
+# (Design-Entscheidung: keine Redistribution der Portal-Abzüge, vgl. Gate 3/§ 87b UrhG)
+_data/gesetze/
+
+# Lokale, nicht versionierte Konfigurations-Overrides (z. B. eigene Wissensbasis-Pfade)
+config.local.json
+
+# Lokale Secrets, Datenbanken, virtuelle Umgebungen und IDE-Zustand
+.env
+*.db
+.venv/
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/Editor
+Thumbs.db
+.DS_Store
+
+# Lokale Publikations-Steuerdateien (LOCK-SYSTEM, nie committen)
+PRIVATE.txt
+PUBLIC.txt
