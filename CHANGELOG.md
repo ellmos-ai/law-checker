@@ -12,3 +12,9 @@
 
 - Added public discovery metadata in `llms.txt`.
 - Added README audience and search-context guidance without expanding the legal claims.
+
+### Discoverability & Marketing (2026-07-24)
+
+- Updated `llms.txt` header with `Last-checked: 2026-07-24`.
+- Integrated Shields.io badges and AI-agent guidance (`llms.txt`) into `README.md`.
+- Performed Discoverability, SEO & Marketing check via GitHubBot (Path B).
