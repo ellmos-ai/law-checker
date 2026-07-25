@@ -2,6 +2,8 @@
 _gutachten/
 _intern/
 LOCK*.txt
+TODO.md
+_after-care/
 
 # Generierte Normtexte — werden beim Nutzer via _tools/gesetze_fetch.py geladen
 # (Design-Entscheidung: keine Redistribution der Portal-Abzüge, vgl. Gate 3/§ 87b UrhG)
