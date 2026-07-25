@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Beschafft Normtexte fuer das Modul rechtsabteilung — registry-getrieben.
+"""Beschafft Normtexte für das Modul law-checker — registry-getrieben.
 
 Quelle: gesetze-im-internet.de (Bundesministerium der Justiz, amtliche
-Arbeitsfassung). Liest die Gesetzes-Registry aus ../config.json, laedt die
+Arbeitsfassung). Liest die Gesetzes-Registry aus ../config.json, lädt die
 XML-Gesamtausgaben der angeforderten Gesetze, extrahiert den Normtext und
 schreibt UTF-8-Textdateien nach ``_data/gesetze/`` (Pfade laut Registry).
 
@@ -12,10 +12,10 @@ Herkunft: erweitert aus dem gesetze_fetch.py des Forschungsprojekts
 
 Aufruf (aus dem Modulordner):
     PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py            # alle mit enabled: true
-    PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py bgb stgb   # gezielte Schluessel (auch disabled)
+    PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py bgb stgb   # gezielte Schlüssel (auch disabled)
     PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py --list     # Registry anzeigen
 
-Gesetze ohne xml_zip (EU-/Laenderrecht) werden uebersprungen und gemeldet —
+Gesetze ohne xml_zip (EU-/Länderrecht) werden übersprungen und gemeldet —
 deren Texte manuell beschaffen (Hinweis-Feld des Registry-Eintrags beachten).
 """
 from __future__ import annotations
@@ -88,7 +88,7 @@ def process(key: str, entry: dict) -> bool:
     label = entry.get("kurz") or key.upper()
     url = entry.get("xml_zip")
     if not url:
-        print(f"[{label}] UEBERSPRUNGEN: kein xml_zip (EU-/Laenderrecht?) — "
+        print(f"[{label}] ÜBERSPRUNGEN: kein xml_zip (EU-/Länderrecht?) — "
               f"manuell beschaffen. Hinweis: {entry.get('hinweis', '—')}")
         return True
     quelle = entry.get("quelle")
@@ -136,14 +136,14 @@ def main(argv: list[str]) -> int:
     if keys:
         unknown = [k for k in keys if k not in registry]
         if unknown:
-            print(f"FEHLER: unbekannte Registry-Schluessel: {', '.join(unknown)}", file=sys.stderr)
+            print(f"FEHLER: unbekannte Registry-Schlüssel: {', '.join(unknown)}", file=sys.stderr)
             print(f"Bekannt: {', '.join(registry)}", file=sys.stderr)
             return 1
         selected = {k: registry[k] for k in keys}
     else:
         selected = {k: v for k, v in registry.items() if v.get("enabled")}
         if not selected:
-            print("Keine aktiven Gesetze in der Registry (und keine Schluessel angegeben).")
+            print("Keine aktiven Gesetze in der Registry (und keine Schlüssel angegeben).")
             return 0
 
     ok = True

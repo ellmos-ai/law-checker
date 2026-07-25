@@ -1,26 +1,26 @@
 {
   "version": 5,
-  "beschreibung": "Konfiguration des Skills rechtsabteilung. Maschinenlesbare Registry der eingesetzten Gesetzbuecher + Workflow-Einstellungen. Aenderungen nur bewusst: version hochzaehlen + Vermerk im CHANGELOG-Block der README. Neue Gesetze hinzufuegen = neuer Eintrag unter 'gesetzbuecher' + Normtext via _tools/gesetze_fetch.py beschaffen + enabled: true. KEIN neuer Agent noetig — der generische Agent 'gesetzbuch' verkoerpert jedes registrierte Gesetz.",
+  "beschreibung": "Konfiguration des Skills rechtsabteilung. Maschinenlesbare Registry der eingesetzten Gesetzbücher + Workflow-Einstellungen. Änderungen nur bewusst: version hochzählen + Vermerk im CHANGELOG-Block der README. Neue Gesetze hinzufügen = neuer Eintrag unter 'gesetzbuecher' + Normtext via _tools/gesetze_fetch.py beschaffen + enabled: true. KEIN neuer Agent nötig — der generische Agent 'gesetzbuch' verkörpert jedes registrierte Gesetz.",
   "gesetzbuecher": {
     "gg": {
       "enabled": true,
-      "name": "Grundgesetz fuer die Bundesrepublik Deutschland",
+      "name": "Grundgesetz für die Bundesrepublik Deutschland",
       "kurz": "GG",
       "zitierweise": "Art.",
       "quelle": "_data/gesetze/GG.txt",
       "index": null,
       "xml_zip": "https://www.gesetze-im-internet.de/gg/xml.zip",
-      "zugriff": "volltext (klein genug fuer einen Agent-Kontext)"
+      "zugriff": "volltext (klein genug für einen Agent-Kontext)"
     },
     "bgb": {
       "enabled": true,
-      "name": "Buergerliches Gesetzbuch",
+      "name": "Bürgerliches Gesetzbuch",
       "kurz": "BGB",
       "zitierweise": "§",
       "quelle": "_data/gesetze/BGB.txt",
       "index": "_data/gesetze/BGB_INDEX.txt",
       "xml_zip": "https://www.gesetze-im-internet.de/bgb/xml.zip",
-      "zugriff": "index + gezielter Paragraphenzugriff (Volltext zu gross)"
+      "zugriff": "index + gezielter Paragraphenzugriff (Volltext zu groß)"
     },
     "stgb": {
       "enabled": false,
@@ -31,22 +31,22 @@
       "index": "_data/gesetze/STGB_INDEX.txt",
       "xml_zip": "https://www.gesetze-im-internet.de/stgb/xml.zip",
       "zugriff": "index + gezielter Paragraphenzugriff",
-      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py stgb ausfuehren (URL-Slug wird dabei live verifiziert)."
+      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py stgb ausführen (URL-Slug wird dabei live verifiziert)."
     },
     "sgb_v": {
       "enabled": true,
-      "name": "Sozialgesetzbuch Fuenftes Buch — Gesetzliche Krankenversicherung",
+      "name": "Sozialgesetzbuch Fünftes Buch — Gesetzliche Krankenversicherung",
       "kurz": "SGB V",
       "zitierweise": "§",
       "quelle": "_data/gesetze/SGB_V.txt",
       "index": "_data/gesetze/SGB_V_INDEX.txt",
       "xml_zip": "https://www.gesetze-im-internet.de/sgb_5/xml.zip",
       "zugriff": "index + gezielter Paragraphenzugriff",
-      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py sgb_v ausfuehren."
+      "hinweis": "Vor Aktivierung: _tools/gesetze_fetch.py sgb_v ausführen."
     },
     "urhg": {
       "enabled": true,
-      "name": "Gesetz ueber Urheberrecht und verwandte Schutzrechte",
+      "name": "Gesetz über Urheberrecht und verwandte Schutzrechte",
       "kurz": "UrhG",
       "zitierweise": "§",
       "quelle": "_data/gesetze/URHG.txt",
@@ -56,7 +56,7 @@
     },
     "rdg": {
       "enabled": true,
-      "name": "Gesetz ueber aussergerichtliche Rechtsdienstleistungen",
+      "name": "Gesetz über außergerichtliche Rechtsdienstleistungen",
       "kurz": "RDG",
       "zitierweise": "§",
       "quelle": "_data/gesetze/RDG.txt",
@@ -66,7 +66,7 @@
     },
     "markeng": {
       "enabled": true,
-      "name": "Gesetz ueber den Schutz von Marken und sonstigen Kennzeichen",
+      "name": "Gesetz über den Schutz von Marken und sonstigen Kennzeichen",
       "kurz": "MarkenG",
       "zitierweise": "§",
       "quelle": "_data/gesetze/MARKENG.txt",
@@ -83,7 +83,7 @@
       "index": null,
       "xml_zip": "https://www.gesetze-im-internet.de/stberg/xml.zip",
       "zugriff": "volltext",
-      "hinweis": "On-demand fuer steuer-assistent-Gutachten aktiviert (2026-07-23) — Pruefgegenstand: Hilfeleistung in Steuersachen (§§ 1-3, 5, 6 StBerG) im Kontext eines lokalen, nicht-beratenden Beleg-Werkzeugs."
+      "hinweis": "On-demand für steuer-assistent-Gutachten aktiviert (2026-07-23) — Prüfgegenstand: Hilfeleistung in Steuersachen (§§ 1-3, 5, 6 StBerG) im Kontext eines lokalen, nicht-beratenden Beleg-Werkzeugs."
     },
     "uwg": {
       "enabled": true,
@@ -137,17 +137,17 @@
       "index": null,
       "xml_zip": null,
       "zugriff": "volltext",
-      "hinweis": "Laenderstaatsvertrag — NICHT auf gesetze-im-internet.de. Vor Aktivierung Text von der Landesmedienanstalt (die-medienanstalten.de) beschaffen; Abrufdatum + Quelle in den Dateikopf. Relevant fuer Presse-/Medienpruefungen (Um:bruch-Herkunftsdomaene)."
+      "hinweis": "Länderstaatsvertrag — NICHT auf gesetze-im-internet.de. Vor Aktivierung Text von der Landesmedienanstalt (die-medienanstalten.de) beschaffen; Abrufdatum + Quelle in den Dateikopf. Relevant für Presse-/Medienprüfungen (Um:bruch-Herkunftsdomäne)."
     }
   },
-  "on_demand_aktivierung": "Braucht ein Pruefauftrag ein registriertes, aber deaktiviertes Gesetz, darf der Skill es aktivieren: Normtext via _tools/gesetze_fetch.py <schluessel> beschaffen, enabled auf true setzen, version hochzaehlen, Vermerk in README-CHANGELOG. Fehlt das Gesetz ganz in der Registry: neuen Eintrag anlegen (gleiche Schritte). Nicht-Bundesrecht (EU/Laender) nur mit manuell beschaffter, im Dateikopf belegter Quelle.",
+  "on_demand_aktivierung": "Braucht ein Prüfauftrag ein registriertes, aber deaktiviertes Gesetz, darf der Skill es aktivieren: Normtext via _tools/gesetze_fetch.py <schluessel> beschaffen, enabled auf true setzen, version hochzählen, Vermerk in README-CHANGELOG. Fehlt das Gesetz ganz in der Registry: neuen Eintrag anlegen (gleiche Schritte). Nicht-Bundesrecht (EU/Länder) nur mit manuell beschaffter, im Dateikopf belegter Quelle.",
   "rechtsprechung": {
     "enabled": true,
-    "regel": "Getrennte Auslegungsschicht NACH der Normtext-Runde: Rechtsprechung zu den als einschlaegig gemeldeten Normen UND zum Pruefgegenstand. NUR web-verifizierte Entscheidungen (Gericht, Entscheidungsdatum, Aktenzeichen, ECLI falls ermittelbar, Fundstelle/URL) — NIE Urteile aus dem Gedaechtnis. Nichts gefunden = 'nicht ermittelt' sagen. Bevorzugte Quellen: Gerichts-Webseiten (bundesverfassungsgericht.de, bundesgerichtshof.de, bsg.bund.de ...), rechtsprechung-im-internet.de, dejure.org, openjur.de."
+    "regel": "Getrennte Auslegungsschicht NACH der Normtext-Runde: Rechtsprechung zu den als einschlägig gemeldeten Normen UND zum Prüfgegenstand. NUR web-verifizierte Entscheidungen (Gericht, Entscheidungsdatum, Aktenzeichen, ECLI falls ermittelbar, Fundstelle/URL) — NIE Urteile aus dem Gedächtnis. Nichts gefunden = 'nicht ermittelt' sagen. Bevorzugte Quellen: Gerichts-Webseiten (bundesverfassungsgericht.de, bundesgerichtshof.de, bsg.bund.de ...), rechtsprechung-im-internet.de, dejure.org, openjur.de."
   },
   "wissensbasis": {
     "jura_wiki": null,
-    "nutzung": "OPTIONAL: Pfad zu einer eigenen lokalen Rechtsgebiets-Wissensbasis eintragen (z. B. Ordner mit Rechtsgebiets-Uebersichten: Rechtsquellen-Hierarchie, Kerngesetze je Gebiet, Gutachtenstil, Instanzenzuege). Nur zur Orientierung, WELCHES Rechtsgebiet/Gesetz einschlaegig ist — NIE als Beleg zitieren (Belege nur aus Normtext + verifizierter Rechtsprechung). null = Schritt entfaellt. Lokale, nicht versionierte Werte gehoeren in config.local.json (gitignored, ueberschreibt gleichnamige Felder)."
+    "nutzung": "OPTIONAL: Pfad zu einer eigenen lokalen Rechtsgebiets-Wissensbasis eintragen (z. B. Ordner mit Rechtsgebiets-Übersichten: Rechtsquellen-Hierarchie, Kerngesetze je Gebiet, Gutachtenstil, Instanzenzüge). Nur zur Orientierung, WELCHES Rechtsgebiet/Gesetz einschlägig ist — NIE als Beleg zitieren (Belege nur aus Normtext + verifizierter Rechtsprechung). null = Schritt entfällt. Lokale, nicht versionierte Werte gehören in config.local.json (gitignored, überschreibt gleichnamige Felder)."
   },
   "risiko_ampel": ["gering", "mittel", "hoch", "kritisch"],
   "eskalation": "references/eskalation_risiko.md — Anwalts-Matrix + Fristen-Disziplin. Bei eingehender Rechtspost (Abmahnung, Unterlassungsaufforderung, Anwaltsschreiben) IMMER zuerst Fristen-Check.",
