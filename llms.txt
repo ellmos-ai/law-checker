@@ -1,4 +1,4 @@
-## Last-checked: 2026-07-24
+## Last-checked: 2026-07-25
 
 # ellmos-ai/law-checker
 
@@ -32,6 +32,18 @@ environment such as Claude Code.
 - `references/eskalation_risiko.md` - risk escalation and lawyer referral matrix
 - `_tools/gesetze_fetch.py` - fetches official statute texts into local ignored data files
 - `docs/ai-act-note.md` - EU AI Act self-classification note
+- `SECURITY.md` - confidentiality of case material, cloud-LLM exposure, reporting path
+- `CHANGELOG.md` - release history including statute-registry versions
+
+## Statute Registry
+
+Configured in `config.json` (registry version 5): 13 registered statutes, 11 of
+them active - Basic Law (GG), Civil Code (BGB), Social Code Book V (SGB V),
+Copyright Act (UrhG), Legal Services Act (RDG), Trade Mark Act (MarkenG), Tax
+Advisory Act (StBerG), Unfair Competition Act (UWG), GDPR, EHDS Regulation (EU)
+2025/327 and the EU Charter of Fundamental Rights. Prepared but inactive:
+Criminal Code (StGB), Interstate Media Treaty (MStV). Federal statutes are
+fetched from gesetze-im-internet.de; EU texts are supplied manually from EUR-Lex.
 
 ## Search Phrases
 

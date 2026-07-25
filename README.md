@@ -101,6 +101,12 @@ Die Prüfung deckt nur die aktivierten Gesetzbücher der Registry ab — jedes
 Gutachten weist die geltende Konfiguration und bewusst ungeprüfte
 Rechtsgebiete aus.
 
+**Registry-Stand (config v5):** 13 registrierte Gesetzbücher, davon 11 aktiv —
+GG, BGB, SGB V, UrhG, RDG, MarkenG, StBerG, UWG, DSGVO, EHDS-VO, GRCh;
+inaktiv vorbereitet: StGB, MStV. Acht davon holt `gesetze_fetch.py` automatisch
+von gesetze-im-internet.de, die drei EU-Normen (DSGVO, EHDS-VO, GRCh) sind
+manuell aus EUR-Lex zu beschaffen. Verbindlich ist immer `--list`.
+
 ## Zweckbestimmung und rechtlicher Rahmen (bitte lesen)
 
 Dieses Werkzeug ist für die **lokal betriebene Selbstanwendung** bestimmt: Du
@@ -136,13 +142,16 @@ geheimnisse oder vertrauliche Post. Beachte:
   in `_gutachten/` abgelegt. Das Werkzeug sendet selbst nichts an die Autoren.
 - **Keine echten Falldaten in GitHub-Issues.**
 
+Ausführlich, inklusive Meldeweg für Sicherheitsbefunde: [`SECURITY.md`](SECURITY.md).
+
 ## Installation (Claude Code)
 
 ```bash
 git clone <repo-url> law-checker
 cd law-checker
 
-# 1) Normtexte holen (Erstbestand: GG + BGB; Register zeigt --list)
+# 1) Normtexte holen — alle aktiven Registry-Eintraege (Registry zeigt --list)
+PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py --list
 PYTHONIOENCODING=utf-8 python _tools/gesetze_fetch.py
 
 # 2) Skill + Agent in die eigene Claude-Code-Umgebung kopieren
@@ -190,9 +199,13 @@ law-checker/
 │   ├── berichtsformat.md       ← Gutachten-Gerüst + Beleg-Pflichtformate
 │   └── eskalation_risiko.md    ← Risiko-Ampel, Fristen, Anwalts-Matrix
 ├── _tools/gesetze_fetch.py     ← Normtexte holen (registry-getrieben)
+├── docs/ai-act-note.md         ← EU-AI-Act-Selbsteinordnung
+├── CHANGELOG.md                ← Versionsverlauf (Registry + Dokumentation)
+├── SECURITY.md                 ← vertrauliche Daten, Meldeweg
+├── llms.txt                    ← maschinenlesbare Kurzfassung für Agenten
+├── ellmos-module.v2.json       ← Modul-Manifest (stabile ID, Grenzen)
 ├── _data/gesetze/              ← lokale Normtexte (generiert, nicht im Repo)
-├── _gutachten/                 ← deine Prüfberichte (lokal, nicht im Repo)
-└── docs/ai-act-note.md         ← EU-AI-Act-Selbsteinordnung
+└── _gutachten/                 ← deine Prüfberichte (lokal, nicht im Repo)
 ```
 
 Die Normtexte selbst liegen bewusst NICHT im Repo: Jeder Nutzer lädt sie

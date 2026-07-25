@@ -4,8 +4,8 @@
   "display_name": "law-checker",
   "category": "domains",
   "kind": "workflow",
-  "status": "development",
-  "visibility": "public-candidate",
+  "status": "active",
+  "visibility": "public",
   "provides": [
     "domain.legal.orientation",
     "domain.legal.sources"
