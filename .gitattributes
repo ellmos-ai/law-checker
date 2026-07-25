@@ -1,0 +1,10 @@
+# Einheitliche Zeilenenden im Repository: LF im Index, plattformüblich im
+# Arbeitsbaum. Ohne diese Datei meldet git auf Windows den gesamten Baum als
+# geändert, sobald ein Editor CRLF schreibt.
+* text=auto eol=lf
+
+# Binärdateien nicht anfassen
+*.png binary
+*.jpg binary
+*.zip binary
+*.pdf binary
