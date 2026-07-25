@@ -10,7 +10,8 @@
 
 **Open-source AI workflow for source-grounded first-look legal orientation.**
 
-> **AI / Agent Discovery:** A machine-readable summary is available in [`llms.txt`](llms.txt) (last checked: 2026-07-24).
+> [!NOTE]
+> **AI / LLM Agent Discovery:** A machine-readable summary is available in [`llms.txt`](llms.txt) (last checked: 2026-07-25).
 
 `law-checker` is a skill and agent bundle for local LLM environments such as
 Claude Code. It helps produce documented first-look legal assessments for
@@ -22,6 +23,23 @@ calendar, and not a replacement for professional legal advice. It is intended
 for self-use in a local agent environment. If a letter, claim, warning, court
 document, authority notice, or deadline is involved, secure the original
 document, identify the deadline, and consult a qualified lawyer.
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    User["User Legal Query"] --> Skill["SKILL.md Orchestrator"]
+    Skill --> Config["config.json Statute Registry"]
+    Config --> Fetcher["_tools/gesetze_fetch.py"]
+    Fetcher --> OfficialSources["Official Sources (gesetze-im-internet.de / EUR-Lex)"]
+    OfficialSources --> LocalData["Local Statute Data Files"]
+    LocalData --> Embodiment["agents/gesetzbuch.md (Statute Agent)"]
+    Skill --> WebCaseLaw["Web-Verified Case Law Layer"]
+    Embodiment --> ReportFormat["references/berichtsformat.md"]
+    WebCaseLaw --> ReportFormat
+    ReportFormat --> Assessment["First-Look Assessment & Risk Matrix"]
+    Assessment --> Escalation["references/eskalation_risiko.md (Lawyer Referral)"]
+```
 
 ## Public Release Scope
 

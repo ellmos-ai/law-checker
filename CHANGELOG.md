@@ -6,6 +6,15 @@ registry changes are listed under the release that shipped them.
 
 ## Unreleased
 
+## 0.2.1 — 2026-07-25
+
+### Added
+
+- Added PEP 621 compliant `pyproject.toml` with project metadata, dependencies (`requests`, `urllib3`), keywords, project URLs, and `[tool.pytest.ini_options]`.
+- Added GFM `> [!NOTE]` alert callout in `README.md` highlighting machine-readable `llms.txt` discovery for AI and LLM agents.
+- Added Mermaid System Architecture diagram in `README.md` illustrating the multi-stage legal orientation workflow (Request -> SKILL.md -> config.json registry -> official statute fetcher -> statute embodiment agent -> case-law verification -> report format & risk matrix).
+- Verified `llms.txt` verification timestamp (`2026-07-25`).
+
 ### Documentation
 
 - Removed absolute local paths and author-specific tooling references from
