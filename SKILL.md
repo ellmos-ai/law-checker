@@ -21,14 +21,16 @@ lebende-verfassung (Gesetzes-Verkörperung, Quellenbindung, Registry-Charta,
 getrennte Rechtsprechungsschicht) · BACH wiki/jura (Rechtsgebiets-Orientierung,
 Gutachtenstil). Details: README.md des Moduls.
 
-**Modulpfad** (im Folgenden `<MODUL>`):
-zuerst über die stabile ID auflösen:
-`python C:\Users\User\OneDrive\.TOPICS\.AI\.MODULES\_scripts\module_resolver.py resolve rechtsabteilung`
+**Modulpfad** (im Folgenden `<MODUL>`): das Wurzelverzeichnis deines
+`law-checker`-Klons — also der Ordner, der `config.json`, `agents/` und
+`references/` enthält. Trage ihn einmalig hier ein oder setze ihn beim Aufruf:
 
-Gate-2-Kompatibilitätsfallback:
-`C:\Users\User\OneDrive\.TOPICS\.AI\.MODULES\.DOMAINS\law-checker`
-(Bei Fremdinstallation aus dem Repo `law-checker`: diesen Pfad auf den eigenen
-Klon-Ort anpassen — siehe README, Abschnitt Installation.)
+```text
+<MODUL> = /pfad/zu/deinem/law-checker
+```
+
+Wer eine eigene Modul-Registry betreibt, löst den Pfad stattdessen über die
+stabile Modul-ID `rechtsabteilung` auf (siehe `ellmos-module.v2.json`).
 
 ## Schritt 0 — Registry laden (immer zuerst)
 
@@ -86,10 +88,11 @@ CHANGELOG-Block der README.
    (6 Abschnitte, Beleg-Pflichtformate, Pflichtabschnitt „Grenzen"), Ablage
    `<MODUL>\_gutachten\JJJJ-MM-TT_<slug>.md`.
 10. **`review_optional`** — bei substanziellen Gutachten laut
-    `config.review_modell` ein Fremdmodell-Review (Codex bevorzugt, Muster:
-    Companion-Script `task --write` mit REVIEW-Zieldatei); Einwände einarbeiten
-    oder als Dissens dokumentieren. Bei Schnellfragen entfällt der Schritt —
-    dann im Gutachten „Review: keins" vermerken.
+    `config.review_modell` ein Review durch ein **zweites, unabhängiges Modell**
+    anfordern (Muster: Gutachten und Prüfauftrag übergeben, Antwort als eigene
+    REVIEW-Datei ablegen); Einwände einarbeiten oder als Dissens dokumentieren.
+    Bei Schnellfragen entfällt der Schritt — dann im Gutachten „Review: keins"
+    vermerken.
 
 Steht in `config.ablauf` eine andere Reihenfolge, gilt die config.
 
@@ -138,7 +141,7 @@ Kein neuer Agent nötig — `gesetzbuch` verkörpert jedes registrierte Gesetz.
 
 Kanonische Fassung: `<MODUL>\SKILL.md`. Registrierte Kopie:
 `~/.claude/skills/rechtsabteilung/SKILL.md` — bei Abweichung gewinnt die neuere
-Fassung (tom-lm-Muster); Änderungen zurückspiegeln. Agent:
+Fassung; Änderungen in die kanonische Fassung zurückspiegeln. Agent:
 `~/.claude/agents/gesetzbuch.md`. Referenzen: `references/berichtsformat.md`,
 `references/eskalation_risiko.md`. Abgrenzung: Der Skill `lebende-verfassung`
 bleibt eigenständig (Forschungsprototyp mit moralischer Prüfinstanz); dieses
