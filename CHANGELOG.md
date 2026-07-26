@@ -6,6 +6,14 @@ registry changes are listed under the release that shipped them.
 
 ## Unreleased
 
+## 0.2.2 — 2026-07-26
+
+### Added
+
+- Added unit test suite (`tests/test_gesetze_fetch.py`) testing registry loading, norm text extraction, XML parsing, and skip logic in `_tools/gesetze_fetch.py`.
+- Verified 4/4 Pytest unit tests passing (0.13s).
+- Synchronized `llms.txt` verification timestamp (`2026-07-26`).
+
 ## 0.2.1 — 2026-07-25
 
 ### Added
