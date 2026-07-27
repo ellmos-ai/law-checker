@@ -11,7 +11,7 @@
 **Open-source AI workflow for source-grounded first-look legal orientation.**
 
 > [!NOTE]
-> **AI / LLM Agent Discovery:** A machine-readable summary is available in [`llms.txt`](llms.txt) (last checked: 2026-07-25).
+> **AI / LLM Agent Discovery:** A machine-readable summary is available in [`llms.txt`](llms.txt) (last checked: 2026-07-28).
 
 `law-checker` is a skill and agent bundle for local LLM environments such as
 Claude Code. It helps produce documented first-look legal assessments for

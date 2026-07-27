@@ -6,6 +6,13 @@ registry changes are listed under the release that shipped them.
 
 ## Unreleased
 
+## 0.2.3 — 2026-07-28
+
+### Added
+
+- Synchronized `llms.txt` and `README.md` AI/LLM discovery verification timestamp (`2026-07-28`).
+- Verified 4/4 Pytest unit test suite passing (0.48s).
+
 ## 0.2.2 — 2026-07-26
 
 ### Added
